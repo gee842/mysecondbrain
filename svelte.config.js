@@ -9,7 +9,7 @@ const config = {
     adapter: adapter({
       pages: 'build',
       assets: 'build',
-      fallback: 'index.html',
+      fallback: undefined,
       precompress: false,
       strict: true
     }),
@@ -21,6 +21,10 @@ const config = {
     alias: {
       $components: 'src/lib/components',
       $lib: 'src/lib'
+    },
+    prerender: {
+      entries: ['*'],
+      handleMissingId: 'warn'
     }
   }
 };

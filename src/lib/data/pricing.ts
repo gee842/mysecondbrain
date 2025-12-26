@@ -17,6 +17,28 @@ export interface PricingPlan {
   ctaStyle: 'primary' | 'ghost';
 }
 
+export const clinicalPricing = {
+  perClient: {
+    price: '$200',
+    period: '/mo',
+    description: 'For individual client accounts with full HIPAA compliance',
+    features: [
+      'BAA included',
+      'Zero data retention',
+      'Priority support'
+    ]
+  },
+  enterprise: {
+    price: 'Custom',
+    description: 'For practices, clinics, and healthcare organizations',
+    features: [
+      'Volume discounts',
+      'Dedicated success manager',
+      'Custom integrations'
+    ]
+  }
+};
+
 export const pricingPlans: PricingPlan[] = [
   {
     name: 'Free',
